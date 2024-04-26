@@ -14,4 +14,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.sealedtx</groupId>
+            <artifactId>java-youtube-downloader</artifactId>
+            <version>3.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.sealedtx</groupId>
+            <artifactId>java-youtube-downloader</artifactId>
+            <version>86bef0f47e</version>
+        </dependency>
+    </dependencies>
+
+
 </project>

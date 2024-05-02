@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2F4550;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ConversionPageController">
+   <children>
+      <VBox prefHeight="606.0" prefWidth="1000.0">
+         <children>
+            <StackPane prefHeight="38.0" prefWidth="1001.0" style="-fx-background-color: #374d5e;">
+               <children>
+                  <HBox prefHeight="29.0" prefWidth="1000.0" spacing="10.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1.0" />
+                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" wrappingWidth="40.52667045593262">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" wrappingWidth="30.860002517700195">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#55dac2" onMouseClicked="#handleAboutButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="About" wrappingWidth="50.52667427062988">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="16.0" />
+                           </font>
+                        </Text>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="785.0" />
+                        <Text fill="#55dac2" onMouseClicked="#handleExitButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Exit" wrappingWidth="27.526670455932617">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="7.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </StackPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#586f7c" height="10.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: linear-gradient(to top, transparent, #232d33);" width="1000.0" />
+            <VBox prefHeight="574.0" prefWidth="1001.0">
+               <children>
+                  <Text fill="#fcf9e8" strokeType="OUTSIDE" strokeWidth="0.0" text="HELP" textAlignment="CENTER" wrappingWidth="1000.4800033569336">
+                     <font>
+                        <Font name="moderna" size="51.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#55dac2" strokeType="OUTSIDE" strokeWidth="0.0" text="YouTube to MP3 converter" textAlignment="CENTER" wrappingWidth="1000.8034057617188">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

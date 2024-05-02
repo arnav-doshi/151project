@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import java.io.*;
 
-public class HelloApplication extends Application {
+public class OLDRhythmRipperApplication extends Application {
 
     private ProgressBar progressBar;
     private Button playButton;
@@ -33,18 +33,18 @@ public class HelloApplication extends Application {
 
         StackPane conversionScreen = createConversionScreen(primaryStage);
         Button enterButton = new Button("Enter");
-        enterButton.setOnAction(e -> primaryStage.setScene(new Scene(conversionScreen, 400, 400)));
+        enterButton.setOnAction(e -> primaryStage.setScene(new Scene(conversionScreen, 600, 800)));
         VBox welcomeLayout = new VBox(20, welcomeScreen, enterButton);
         welcomeLayout.setAlignment(Pos.CENTER);
 
-        primaryStage.setScene(new Scene(welcomeLayout, 400, 400));
-        primaryStage.setTitle("RhythmmRipper - Arnav/Owen/Sid");
+        primaryStage.setScene(new Scene(welcomeLayout, 600, 800));
+        primaryStage.setTitle("RhythmRipper - Arnav/Owen/Sid");
         primaryStage.show();
     }
 
     private StackPane createWelcomeScreen() {
         StackPane stackPane = new StackPane();
-        Text welcomeText = new Text("Welcome to Rhythmm Ripper");
+        Text welcomeText = new Text("Welcome to Rhythm Ripper");
         stackPane.getChildren().add(welcomeText);
         return stackPane;
     }
@@ -92,7 +92,7 @@ public class HelloApplication extends Application {
             executePy(youtubeLink, outputTextArea);
         });
 
-        Text title = new Text("Rhythmm Ripper");
+        Text title = new Text("Rhythm Ripper");
         title.setStyle("-fx-font-size: 20px;");
 
         VBox vbox = new VBox(10, title, textField, convertButton, progressBar, playButton, pauseButton, outputTextArea, playbackProgressBar);
@@ -104,7 +104,8 @@ public class HelloApplication extends Application {
 
     private void executePy(String youtubeLink, TextArea outputTextArea) {
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("src/main/resources/com/example/demo/dist/ytmp3.exe");
+            String projectDir = System.getProperty("user.dir");
+            ProcessBuilder processBuilder = new ProcessBuilder(projectDir + File.separator + "\\CS151-RhythmRipper\\demo\\src\\main\\resources\\com\\example\\demo\\dist\\ytmp3.exe");
             Process process = processBuilder.start();
 
             new Thread(() -> {

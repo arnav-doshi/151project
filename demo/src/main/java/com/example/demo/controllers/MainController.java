@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class MainController extends RhythmRipperApplication {
 
-    public static void loadFXMLPage(String fileName) throws IOException {
+    public void loadFXMLPage(String fileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RhythmRipperApplication.class.getResource("scenes/" + fileName));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
         RhythmRipperApplication.stage.setScene(scene);

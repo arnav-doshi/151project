@@ -3,9 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2F4550;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ConversionPageController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2F4550;" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ConversionPageController">
    <children>
       <VBox prefHeight="606.0" prefWidth="1000.0">
          <children>
@@ -25,23 +25,23 @@
                   <HBox prefHeight="29.0" prefWidth="1000.0" spacing="10.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1.0" />
-                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" wrappingWidth="40.52667045593262">
+                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Home" wrappingWidth="40.52667045593262">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" wrappingWidth="30.860002517700195">
+                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Help" wrappingWidth="30.860002517700195">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="#55dac2" onMouseClicked="#handleAboutButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="About" wrappingWidth="50.52667427062988">
+                        <Text fill="#55dac2" onMouseClicked="#handleAboutButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="About" wrappingWidth="50.52667427062988">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="785.0" />
-                        <Text fill="#55dac2" onMouseClicked="#handleExitButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Exit" wrappingWidth="27.526670455932617">
+                        <Text fill="#55dac2" onMouseClicked="#handleExitButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Exit" wrappingWidth="27.526670455932617">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
@@ -75,9 +75,9 @@
                         <Font name="CoolveticaRg-Regular" size="15.0" />
                      </font>
                   </Text>
-                  <StackPane prefHeight="31.0" prefWidth="1001.0">
+                  <StackPane prefHeight="31.0" prefWidth="849.0">
                      <children>
-                        <TextField minHeight="0.0" prefHeight="25.0" prefWidth="701.0" promptText="Paste YouTube link" style="-fx-background-color: #fcf9e8;">
+                        <TextField fx:id="youtubeLinkTextField" minHeight="0.0" prefHeight="25.0" prefWidth="701.0" promptText="Paste YouTube link" style="-fx-background-color: #fcf9e8;">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -92,17 +92,26 @@
                   </StackPane>
                   <StackPane prefHeight="3.0" prefWidth="693.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#586f7c" height="14.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: linear-gradient(to top, transparent, #232d33);" width="701.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#586f7c" height="7.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: linear-gradient(to top, transparent, #232d33);" width="701.0" />
                      </children>
                   </StackPane>
-                  <StackPane prefHeight="32.0" prefWidth="1001.0">
+                  <StackPane prefHeight="32.0" prefWidth="751.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d5a66" height="29.0" stroke="#fcf9e8" strokeType="INSIDE" width="87.0" />
-                        <Text fill="#fcf9e8" onMouseClicked="#handleConvertButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Convert">
-                           <font>
-                              <Font name="CoolveticaRg-Regular" size="18.0" />
-                           </font>
-                        </Text>
+                        <Rectangle fx:id="convertButtonBox" arcHeight="5.0" arcWidth="5.0" fill="#3d5a66" height="29.0" stroke="#fcf9e8" strokeType="INSIDE" width="87.0" />
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Text fx:id="convertButton" fill="#fcf9e8" onMouseClicked="#handleConvertButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="convert-hover-effect" text="Convert">
+                                 <font>
+                                    <Font name="CoolveticaRg-Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="progressText" fill="#fcf9e8" strokeType="OUTSIDE" strokeWidth="0.0" text="Converting and downloading..." visible="false">
+                                 <font>
+                                    <Font name="CoolveticaRg-Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
                      </children>
                   </StackPane>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="693.0" />
@@ -111,26 +120,22 @@
                         <Insets left="150.0" right="150.0" />
                      </padding>
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#374d5e" height="226.0" stroke="TRANSPARENT" strokeType="INSIDE" width="570.0">
-                           <effect>
-                              <Glow level="0.25" />
-                           </effect>
-                        </Rectangle>
+                        <TextArea fx:id="conversionTextArea" editable="false" prefHeight="226.0" prefWidth="624.0" style="-fx-background-color: transparent;" styleClass="text-area" wrapText="true" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="3.0" prefWidth="693.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#586f7c" height="7.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: linear-gradient(to top, transparent, #232d33);" width="393.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#586f7c" height="14.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: linear-gradient(to top, transparent, #232d33);" width="701.0" />
                      </children>
                   </StackPane>
                   <HBox prefHeight="14.0" prefWidth="694.0" style="-fx-alignment: center;">
                      <children>
-                        <ProgressBar prefHeight="8.0" prefWidth="399.0" progress="0.0" />
+                        <ProgressBar id="playbackProgressBar" fx:id="playbackProgressBar" prefHeight="8.0" prefWidth="399.0" progress="0.0" visible="false" />
                      </children>
                   </HBox>
                   <HBox prefHeight="19.0" prefWidth="694.0" style="-fx-alignment: center;">
                      <children>
-                        <ImageView fitHeight="35.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                        <ImageView fx:id="rewind" fitHeight="35.0" fitWidth="45.0" onMouseClicked="#handleRewindButtonClick" pickOnBounds="true" preserveRatio="true" rotate="180.0" styleClass="media-button-hover-effect" visible="false">
                            <image>
                               <Image url="@../images/forward_button-removebg-preview.png" />
                            </image>
@@ -138,15 +143,27 @@
                               <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
                            </effect>
                         </ImageView>
-                        <ImageView fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/play_button-removebg-preview.png" />
-                           </image>
-                           <effect>
-                              <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="play" fitHeight="39.0" fitWidth="36.0" onMouseClicked="#handlePlayButtonClick" pickOnBounds="true" preserveRatio="true" styleClass="media-button-hover-effect" visible="false">
+                                 <image>
+                                    <Image url="@../images/play_button-removebg-preview.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fx:id="pause" fitHeight="39.0" fitWidth="36.0" onMouseClicked="#handlePauseButtonClick" pickOnBounds="true" preserveRatio="true" styleClass="media-button-hover-effect" visible="false">
+                                 <image>
+                                    <Image url="@../images/Screenshot_2024-05-04_203326-removebg-preview.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                        <ImageView id="fastForward" fx:id="fastForward" fitHeight="35.0" fitWidth="53.0" onMouseClicked="#handleFastForwardButtonClick" pickOnBounds="true" preserveRatio="true" styleClass="media-button-hover-effect" visible="false">
                            <image>
                               <Image url="@../images/forward_button-removebg-preview.png" />
                            </image>
@@ -158,7 +175,7 @@
                   </HBox>
                   <HBox prefHeight="3.0" prefWidth="694.0" style="-fx-alignment: center;">
                      <children>
-                        <Slider prefHeight="5.0" prefWidth="140.0">
+                        <Slider prefHeight="5.0" prefWidth="140.0" visible="false">
                            <padding>
                               <Insets left="10.0" />
                            </padding>

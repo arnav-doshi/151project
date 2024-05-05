@@ -1,0 +1,21 @@
+.hover-effect:hover {
+    -fx-fill: #fcf9e8;
+    -fx-cursor: hand;
+}
+
+.convert-hover-effect:hover {
+    -fx-fill: #55dac2;
+    -fx-cursor: hand;
+}
+
+.text-area .content {
+    -fx-background-color:  #374d5e;
+}
+
+#conversionTextArea {
+    -fx-text-fill:  #55dac2;
+}
+
+.media-button-hover-effect:hover {
+    -fx-cursor: hand;
+}

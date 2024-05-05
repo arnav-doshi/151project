@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2F4550;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ConversionPageController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2F4550;" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ConversionPageController">
    <children>
       <VBox prefHeight="606.0" prefWidth="1000.0">
          <children>
@@ -18,23 +18,23 @@
                   <HBox prefHeight="29.0" prefWidth="1000.0" spacing="10.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1.0" />
-                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" wrappingWidth="40.52667045593262">
+                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Home" wrappingWidth="40.52667045593262">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" wrappingWidth="30.860002517700195">
+                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Help" wrappingWidth="30.860002517700195">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="#55dac2" onMouseClicked="#handleAboutButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="About" wrappingWidth="50.52667427062988">
+                        <Text fill="#55dac2" onMouseClicked="#handleAboutButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="About" wrappingWidth="50.52667427062988">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="785.0" />
-                        <Text fill="#55dac2" onMouseClicked="#handleExitButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Exit" wrappingWidth="27.526670455932617">
+                        <Text fill="#55dac2" onMouseClicked="#handleExitButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Exit" wrappingWidth="27.526670455932617">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>

@@ -52,14 +52,19 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#586f7c" height="10.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: linear-gradient(to top, transparent, #232d33);" width="1000.0" />
             <VBox prefHeight="574.0" prefWidth="1001.0">
                <children>
-                  <Text fill="#fcf9e8" strokeType="OUTSIDE" strokeWidth="0.0" text="ABOUT" textAlignment="CENTER" wrappingWidth="1000.4800033569336">
+                  <Text fill="#fcf9e8" strokeType="OUTSIDE" strokeWidth="0.0" text="About" textAlignment="CENTER" wrappingWidth="1000.4800033569336">
                      <font>
                         <Font name="moderna" size="51.0" />
                      </font>
                   </Text>
-                  <Text fill="#55dac2" strokeType="OUTSIDE" strokeWidth="0.0" text="YouTube to MP3 converter" textAlignment="CENTER" wrappingWidth="1000.8034057617188">
+                  <Text fill="#55dac2" strokeType="OUTSIDE" strokeWidth="0.0" text="Developers:" textAlignment="CENTER" wrappingWidth="1000.8034057617188">
                      <font>
-                        <Font name="CoolveticaRg-Regular" size="15.0" />
+                        <Font name="CoolveticaRg-Regular" size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#55dac2" strokeType="OUTSIDE" strokeWidth="0.0" text="Arnav Doshi, Owen Hall, Sidharth Krishnaswamy" textAlignment="CENTER" wrappingWidth="1000.8034057617188">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="16.0" />
                      </font>
                   </Text>
                </children>

@@ -26,7 +26,7 @@ public class ConversionPageController extends MainController {
     @FXML
     ImageView rewind, play, fastForward, pause;
     @FXML
-    Text convertButton, progressText;
+    Text convertButton, progressText, insertLinkText;
     @FXML
     Rectangle convertButtonBox;
 
@@ -42,13 +42,14 @@ public class ConversionPageController extends MainController {
     }
     @FXML
     protected void handleConvertButtonClick() {
-        System.out.println("Converting to mp3...");
-        convertButton.setVisible(false);
-        convertButtonBox.setVisible(false);
-        progressText.setVisible(true);
         String youtubeLink = youtubeLinkTextField.getText();
-        executePy(youtubeLink, conversionTextArea);
-
+        if (!youtubeLink.isEmpty()) {
+            System.out.println("Converting to mp3...");
+            convertButton.setVisible(false);
+            convertButtonBox.setVisible(false);
+            progressText.setVisible(true);
+            executePy(youtubeLink, conversionTextArea);
+        }
     }
 
     @FXML
@@ -116,6 +117,13 @@ public class ConversionPageController extends MainController {
                             });
 
                             playMP3(mp3FilePath);
+                        }
+                        if (line.startsWith("Download failed!!!!")) {
+                            convertButtonBox.setVisible(true);
+                            convertButton.setVisible(true);
+                            progressText.setVisible(false);
+                            insertLinkText.setText("Invalid link - enter a new YouTube link to convert");
+                            break;
                         }
                     }
                 } catch (IOException e) {

@@ -23,7 +23,7 @@
                <children>
                   <VBox prefHeight="140.0" prefWidth="1001.0">
                      <children>
-                        <Text fill="#fcf9e8" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to rhythmripper" textAlignment="CENTER" wrappingWidth="1000.4800033569336">
+                        <Text fill="#fcf9e8" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to rhythmmripper" textAlignment="CENTER" wrappingWidth="1000.4800033569336">
                            <font>
                               <Font name="moderna" size="51.0" />
                            </font>

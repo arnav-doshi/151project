@@ -1,4 +1,3 @@
-#!/Users/arnav/Desktop/repos/CS151-RhythmRipper/MACdemo/src/main/resources/com/example/demo/ytenv/bin/python3
 
 import os
 import sys

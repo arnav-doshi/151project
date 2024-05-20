@@ -25,12 +25,12 @@
                   <HBox prefHeight="29.0" prefWidth="1000.0" spacing="10.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1.0" />
-                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Home" wrappingWidth="40.52667045593262">
+                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Home" wrappingWidth="46.52667045593262">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Help" wrappingWidth="30.860002517700195">
+                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Help" wrappingWidth="39.860002517700195">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
@@ -69,7 +69,7 @@
                         <Font name="CoolveticaRg-Regular" size="15.0" />
                      </font>
                   </Text>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="32.0" stroke="TRANSPARENT" strokeType="INSIDE" width="998.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="10.0" stroke="TRANSPARENT" strokeType="INSIDE" width="998.0" />
                   <Text fx:id="insertLinkText" fill="#fcf9e8" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert YouTube link to convert" textAlignment="CENTER" wrappingWidth="1000.8034057617188">
                      <font>
                         <Font name="CoolveticaRg-Regular" size="15.0" />
@@ -182,6 +182,20 @@
                         </Slider>
                      </children>
                   </HBox>
+                  <StackPane prefHeight="32.0" prefWidth="751.0">
+                     <children>
+                        <Rectangle fx:id="openVideoButtonBox" arcHeight="5.0" arcWidth="5.0" fill="#3d5a66" height="29.0" stroke="#fcf9e8" strokeType="INSIDE" visible="false" width="106.0" />
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Text fx:id="openVideoButton" fill="#fcf9e8" onMouseClicked="#handleOpenVideoButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="convert-hover-effect" text="Open Video" visible="false">
+                                 <font>
+                                    <Font name="CoolveticaRg-Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </StackPane>
                </children>
                <padding>
                   <Insets top="5.0" />

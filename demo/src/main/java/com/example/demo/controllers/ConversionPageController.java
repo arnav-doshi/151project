@@ -14,6 +14,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import java.awt.*;
 import java.io.*;
 
 public class ConversionPageController extends MainController {
@@ -26,9 +27,11 @@ public class ConversionPageController extends MainController {
     @FXML
     ImageView rewind, play, fastForward, pause;
     @FXML
-    Text convertButton, progressText, insertLinkText;
+    Text convertButton, progressText, insertLinkText, openVideoButton;
     @FXML
-    Rectangle convertButtonBox;
+    Rectangle convertButtonBox, openVideoButtonBox;
+
+    private String mp4FilePath;
 
     static MediaPlayer mediaPlayer;
 
@@ -89,6 +92,11 @@ public class ConversionPageController extends MainController {
         }
     }
 
+    @FXML
+    protected void handleOpenVideoButtonClick() {
+        openVideo(mp4FilePath);
+    }
+
     private void executePy(String youtubeLink, TextArea outputTextArea) {
         try {
             String projectDir = System.getProperty("user.dir");
@@ -105,15 +113,16 @@ public class ConversionPageController extends MainController {
                             outputTextArea.appendText(finalLine + "\n");
                         });
 
-                        if (line.startsWith("Download complete:!!! ")) {
+                        if (line.startsWith("Audio File: ")) {
 
-                            String mp3FilePath = line.substring("Download complete:!!! ".length()).replace("\b", "\\");
+                            String mp3FilePath = line.substring("Audio File: ".length()).replace("\b", "\\");
 
                             Platform.runLater(() -> {
                                 //progressBar.setVisible(false);
                                 play.setVisible(true);
                                 //pauseButton.setVisible(false);
                                 playbackProgressBar.setVisible(true);
+
                             });
 
                             playMP3(mp3FilePath);
@@ -124,6 +133,11 @@ public class ConversionPageController extends MainController {
                             progressText.setVisible(false);
                             insertLinkText.setText("Invalid link - enter a new YouTube link to convert");
                             break;
+                        }
+                        if (line.startsWith("Video File: ")) {
+                            mp4FilePath = line.substring("Video File: ".length()).replace("\b", "\\");
+                            openVideoButton.setVisible(true);
+                            openVideoButtonBox.setVisible(true);
                         }
                     }
                 } catch (IOException e) {
@@ -171,4 +185,23 @@ public class ConversionPageController extends MainController {
         }
     }
 
+    private void openVideo(String filePath) {
+        File file = new File(filePath);
+        if (!file.exists()) {
+            System.out.println("File does not exist!");
+            return;
+        }
+
+        if (!Desktop.isDesktopSupported()) {
+            System.out.println("Desktop is not supported!");
+            return;
+        }
+
+        Desktop desktop = Desktop.getDesktop();
+        try {
+            desktop.open(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

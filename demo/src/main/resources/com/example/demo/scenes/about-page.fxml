@@ -18,12 +18,12 @@
                   <HBox prefHeight="29.0" prefWidth="1000.0" spacing="10.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1.0" />
-                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Home" wrappingWidth="40.52667045593262">
+                        <Text fill="#55dac2" onMouseClicked="#handleHomeButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Home" wrappingWidth="45.52667045593262">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Help" wrappingWidth="30.860002517700195">
+                        <Text fill="#55dac2" onMouseClicked="#handleHelpButtonClick" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hover-effect" text="Help" wrappingWidth="37.860002517700195">
                            <font>
                               <Font name="CoolveticaRg-Regular" size="16.0" />
                            </font>

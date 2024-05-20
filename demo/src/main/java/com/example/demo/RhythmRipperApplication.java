@@ -18,7 +18,7 @@ public class RhythmRipperApplication extends Application {
         stage.setTitle("Rhythm Ripper");
         stage.setScene(scene);
         stage.show();
-        Font.loadFont(getClass().getResourceAsStream("/resources/com.example.demo/fonts/MODERNA.TTF"), 12);
+
     }
 
     public static void main(String[] args) {

@@ -18,7 +18,6 @@ public class RhythmRipperApplication extends Application {
         stage.setTitle("Rhythm Ripper");
         stage.setScene(scene);
         stage.show();
-
     }
 
     public static void main(String[] args) {

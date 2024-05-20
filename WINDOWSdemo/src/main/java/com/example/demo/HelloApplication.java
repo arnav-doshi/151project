@@ -163,7 +163,7 @@ public class HelloApplication extends Application {
                 progressBar.setVisible(true);
                 playButton.setVisible(true);
                 playbackProgressBar.setVisible(true);
-                openVideoButton.setVisible(true); // Show the video button when conversion is complete
+                openVideoButton.setVisible(true); 
             }
         });
 

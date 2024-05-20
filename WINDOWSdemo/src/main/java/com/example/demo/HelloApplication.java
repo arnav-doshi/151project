@@ -60,7 +60,7 @@ public class HelloApplication extends Application {
     }
 
     private Pane createConversionScreen(Stage primaryStage) throws FileNotFoundException {
-        Font customFont = Font.loadFont(new FileInputStream(new File("src\\main\\resources\\SF-Pro-Rounded-Regular.ttf")), 20);
+        //Font customFont = Font.loadFont(new FileInputStream(new File("src\\main\\resources\\SF-Pro-Rounded-Regular.ttf")), 20);
 
         VBox conversionScreen = new VBox(10);
         conversionScreen.setStyle("-fx-background-color: #eeeeee;");
@@ -82,7 +82,7 @@ public class HelloApplication extends Application {
         }
 
         TextField textField = new TextField();
-        textField.setFont(customFont);
+        //textField.setFont(customFont);
         textField.setStyle("-fx-background-color: rgba(0, 0, 0, 0.5); " +
                 "-fx-text-fill: white; " +
                 "-fx-padding: 8px 12px; " +
@@ -103,11 +103,11 @@ public class HelloApplication extends Application {
                 "-fx-border-radius: 5px; " +
                 "-fx-background-radius: 5px; " +
                 "-fx-cursor: hand;");
-        convertButton.setFont(customFont);
+        //convertButton.setFont(customFont);
         convertButton.setMaxWidth(85);
 
         TextArea outputTextArea = new TextArea();
-        outputTextArea.setFont(customFont);
+        //outputTextArea.setFont(customFont);
         outputTextArea.setStyle("-fx-control-inner-background: rgba(0, 0, 0, 0.5); " +
                 "-fx-text-fill: white; " +
                 "-fx-font-family: 'Helvetica'; " +
@@ -130,7 +130,7 @@ public class HelloApplication extends Application {
         progressBar.setVisible(false);
 
         playButton = new Button("Play/Pause");
-        playButton.setFont(customFont);
+        //playButton.setFont(customFont);
         playButton.setStyle("-fx-background-color: #0070c9; " +
                 "-fx-text-fill: white; " +
                 "-fx-font-size: 16px; " +
@@ -142,7 +142,7 @@ public class HelloApplication extends Application {
         playButton.setVisible(false);
 
         openVideoButton = new Button("Open Video");
-        openVideoButton.setFont(customFont);
+        //openVideoButton.setFont(customFont);
         openVideoButton.setStyle("-fx-background-color: #0070c9; " +
                 "-fx-text-fill: white; " +
                 "-fx-font-size: 16px; " +

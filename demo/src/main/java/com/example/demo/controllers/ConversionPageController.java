@@ -99,8 +99,9 @@ public class ConversionPageController extends MainController {
 
     private void executePy(String youtubeLink, TextArea outputTextArea) {
         try {
-            String projectDir = System.getProperty("user.dir");
-            ProcessBuilder processBuilder = new ProcessBuilder(projectDir + File.separator + "\\CS151-RhythmRipper\\demo\\src\\main\\resources\\com\\example\\demo\\dist\\ytmp3.exe");
+            //tring projectDir = System.getProperty("user.dir");
+            ProcessBuilder processBuilder = new ProcessBuilder("src/main/resources/com/example/demo/dist/ytmp3.exe");
+
             Process process = processBuilder.start();
 
             new Thread(() -> {
